@@ -20,7 +20,7 @@ const router = {
                 throw new Error('Preencha todos os campos!');             }
             const user = new User (name, email, age);
             lista.addUser(user);
-            res.status(200).json({message: 'Pedido feito com sucesso'});
+            res.status(200).json({message: 'Usuário feito com sucesso'});
         } catch (error) {
             res.status(400).json({message: "Erro ao adicionar pedido", error});
         }
@@ -46,7 +46,7 @@ const router = {
     deleteUser: (req, res) => {
         try {
             lista.deleteUser(req.params.id);
-            res.status(200).json({message: 'Usuário deletada com sucesso'})
+            res.status(200).json({message: 'Usuário deletado com sucesso'})
         } catch (error) {
             res.status(404).json('Erro ao deletar usuário', error);
         }
